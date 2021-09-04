@@ -1,4 +1,5 @@
 import React from "react"
+import s from "./App.module.scss"
 import { Route, Switch } from "react-router"
 import { DidntGetEmail } from "./Modules/DidntGetEmail"
 import { EmailConfirmation } from "./Modules/EmailConfirmation"
@@ -7,11 +8,13 @@ import { Entrance } from "./Modules/Entrance"
 import { ForgetPassword } from "./Modules/ForgetPassword"
 import { Header } from "./Modules/Header"
 import { Registration } from "./Modules/Registration"
+import { Conditions } from "./Modules/Conditions"
 
 export const App = () => {
   return (
     <div>
       <Header />
+      <main>
       <Switch>
         <Route exact={true} path={'/'} render={() => <Entrance />} />
         <Route path={'/registration'} render={() => <Registration />} />
@@ -19,7 +22,9 @@ export const App = () => {
         <Route path={'/didntgetemail'} render={() => <DidntGetEmail />} />
         <Route path={'/forgetpassword'} render={() => <ForgetPassword />} />
         <Route path={'/emailsent'} render={() => <EmailSent />} />
+        <Route path={'/conditions'} render={() => <Conditions />} />
       </Switch>
+      </main>
     </div>
   )
 }

@@ -1,0 +1,125 @@
+.registrationWrapper {
+    font-family: 'Open' Sans;
+    max-width: 496px;
+    text-align: center;
+    h1 {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 56px;
+        line-height: 76px;
+    }
+    .moduleDiscription {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        color: #999999;
+    }
+    .socialNetworks {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        button {
+            width: 100%;
+            height: 56px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border: 1px solid #E6E6E6;
+            box-sizing: border-box;
+            border-radius: 12px;
+            background: none;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 24px;
+        }
+        button:hover {
+            background: #F6F8FF;
+            border: none;
+            cursor: url('../assets/icons/OnSocialNetworkHoverCursorIcon.png'), pointer;
+        }
+        :last-child {
+            margin-left: 3%;
+        }
+    }
+    form {
+        color: #FB2424;
+        input {
+            width: 100%;
+            height: 56px;
+            margin-top: 16px;
+            border: 1px solid #E6E6E6;
+            box-sizing: border-box;
+            border-radius: 12px;
+            background: none;
+            padding-left: 20px;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 19px;
+            outline: none;
+        }
+        ::-webkit-input-placeholder {
+            font-family: 'Open' Sans;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 24px;
+            color: #E6E6E6;
+          }
+          :-ms-input-placeholder {
+            font-family: 'Open' Sans;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 24px;
+            color: #E6E6E6;
+          }
+          ::-moz-placeholder {
+            font-family: 'Open' Sans;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 24px;
+            color: #E6E6E6;
+            opacity: 1;
+          }
+          :-moz-placeholder {
+            font-family: 'Open' Sans;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 24px;
+            color: #E6E6E6;
+            opacity: 1;
+          }
+        button {
+            width: 100%;
+            height: 64px;
+            margin-top: 32px;
+            margin-bottom: 24px;
+            background: #4E74F5;
+            border-radius: 64px;
+            border: none;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 13px;
+        }
+        span {
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 64px;
+            color: #4E74F5;
+        }
+    }
+    .condition {
+        height: 48px;
+        span {
+            font-weight: 600;
+            font-size: 14px;
+            color: #4E74F5;
+        }
+    }
+}
