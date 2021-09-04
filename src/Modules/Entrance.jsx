@@ -1,5 +1,5 @@
-import { ErrorMessage, Formik } from "formik"
-import React, { useState } from "react"
+import { Formik } from "formik"
+import React, { useEffect, } from "react"
 import s from "./Entrance.module.scss"
 import FacebookIcon from "../assets/icons/FacebookIcon.svg"
 import GoogleIcon from "../assets/icons/GoogleIcon.svg"
@@ -12,18 +12,20 @@ export const Entrance = () => {
     const history = useHistory()
     const dispatch = useDispatch()
 
-    const { users } = useSelector(mainSelector)
-
-    const [usePromocode, setUsePromocode] = useState(false)
+    const { users, isAuth } = useSelector(mainSelector)
 
     const onShowConditionsClick = () => {
-        history.push("/conditions")
+        history.push("/forgetpassword")
     }
 
     const confirmLogin = () => {
         dispatch(setIsAuth(true))
         history.push("/profilepage")
     }
+
+    useEffect(() => {
+        isAuth && history.push("/profilepage")
+    }, [isAuth])
 
     return (
         <div className={s.entranceWrapper}>

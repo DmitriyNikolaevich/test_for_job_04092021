@@ -12,7 +12,7 @@ export const DidntGetEmail = () => {
     const { users } = useSelector(mainSelector)
 
     const resendMailr = () => {
-        history.push("/emailsent")
+        history.push("/emailsent/didntgetemail")
     }
 
     const onAbbortClick = () => {

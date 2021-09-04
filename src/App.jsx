@@ -22,7 +22,7 @@ export const App = () => {
         <Route path={'/emailconfirmation'} render={() => <EmailConfirmation />} />
         <Route path={'/didntgetemail'} render={() => <DidntGetEmail />} />
         <Route path={'/forgetpassword'} render={() => <ForgetPassword />} />
-        <Route path={'/emailsent'} render={() => <EmailSent />} />
+        <Route path={'/emailsent/:from?'} render={() => <EmailSent />} />
         <Route path={'/conditions'} render={() => <Conditions />} />
         <Route path={'/profilepage'} render={() => <ProfilePage />} />
       </Switch>
