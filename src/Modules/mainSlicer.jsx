@@ -8,7 +8,8 @@ const initialState = {
             email: "example@example.com",
             password: "password2021"
         }
-    ]
+    ],
+    currentUser: {}
 }
 
 export const mainSelector = (state) => state.main
@@ -22,13 +23,17 @@ export const mainSlicer = createSlice({
         },
         addUser(state, actions) {
             state.users = [...state.users, actions.payload]
+        },
+        setCurrentUser(state, actions) {
+            state.currentUser = actions.payload
         }
     }
 })
 
 export const {
     setIsAuth,
-    addUser
+    addUser,
+    setCurrentUser
 } = mainSlicer.actions
 
 export default mainSlicer.reducer

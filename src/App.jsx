@@ -9,6 +9,7 @@ import { ForgetPassword } from "./Modules/ForgetPassword"
 import { Header } from "./Modules/Header"
 import { Registration } from "./Modules/Registration"
 import { Conditions } from "./Modules/Conditions"
+import { ProfilePage } from "./Modules/ProfilePage"
 
 export const App = () => {
   return (
@@ -23,6 +24,7 @@ export const App = () => {
         <Route path={'/forgetpassword'} render={() => <ForgetPassword />} />
         <Route path={'/emailsent'} render={() => <EmailSent />} />
         <Route path={'/conditions'} render={() => <Conditions />} />
+        <Route path={'/profilepage'} render={() => <ProfilePage />} />
       </Switch>
       </main>
     </div>

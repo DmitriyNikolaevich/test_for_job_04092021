@@ -6,7 +6,7 @@ import GoogleIcon from "../assets/icons/GoogleIcon.svg"
 import { Formik } from 'formik'
 import { useHistory } from "react-router"
 import { useSelector } from "react-redux"
-import { addUser, mainSelector, setIsAuth } from "./mainSlicer"
+import { addUser, mainSelector, setCurrentUser, setIsAuth } from "./mainSlicer"
 import { useDispatch } from "react-redux"
 
 export const Registration = () => {
@@ -29,7 +29,9 @@ export const Registration = () => {
     const registrateUser = (user) => {
         dispatch(addUser(user))
         dispatch(setIsAuth(true))
+        dispatch(setCurrentUser({ name: user.name, email: user.email}))
         history.push('/emailconfirmation')
+
     }
 
     return (
@@ -47,7 +49,7 @@ export const Registration = () => {
                 </button>
             </div>
             <div className={s.moduleDiscription}>
-                Или
+                или
             </div>
 
             <Formik
@@ -87,6 +89,7 @@ export const Registration = () => {
                 }) => (
                     <form onSubmit={handleSubmit}>
                         <input
+                            className={errors.name && s.errorField}
                             type="name"
                             name="name"
                             onChange={handleChange}
@@ -96,6 +99,7 @@ export const Registration = () => {
                         />
                         {errors.name && touched.name && errors.name}
                         <input
+                            className={errors.email && s.errorField}
                             type="email"
                             name="email"
                             onChange={handleChange}
@@ -105,6 +109,7 @@ export const Registration = () => {
                         />
                         {errors.email && touched.email && errors.email}
                         <input
+                            className={errors.password && s.errorField}
                             type="password"
                             name="password"
                             onChange={handleChange}
@@ -116,6 +121,7 @@ export const Registration = () => {
 
                         {usePromocode
                         ? <input
+                            className={errors.promocode && s.errorField}
                             type="promocode"
                             name="promocode"
                             onChange={handleChange}

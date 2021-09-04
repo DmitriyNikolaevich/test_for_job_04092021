@@ -1,4 +1,4 @@
-.registrationWrapper {
+.entranceWrapper {
     font-family: 'Open' Sans;
     max-width: 496px;
     text-align: center;
@@ -12,7 +12,7 @@
         font-style: normal;
         font-weight: normal;
         font-size: 16px;
-        line-height: 24px;
+        line-height: 20px;
         color: #999999;
     }
     .socialNetworks {
@@ -59,6 +59,9 @@
             font-size: 14px;
             line-height: 19px;
             outline: none;
+            :invalid {
+                border: 1px solid #FB2424;
+            }
         }
         .errorField {
             border: 1px solid #FB2424;
@@ -117,12 +120,10 @@
             color: #4E74F5;
         }
     }
-    .condition {
-        height: 48px;
-        span {
-            font-weight: 600;
-            font-size: 14px;
-            color: #4E74F5;
-        }
+    span {
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 24px;
+        color: #4E74F5;
     }
 }
