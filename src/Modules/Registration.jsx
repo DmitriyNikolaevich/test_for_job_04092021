@@ -1,13 +1,12 @@
 import React, { useState } from "react"
 import s from "./Registration.module.scss"
-import FacebookIcon from "../assets/icons/FacebookIcon.svg"
-import GoogleIcon from "../assets/icons/GoogleIcon.svg"
 
 import { Formik } from 'formik'
 import { useHistory } from "react-router"
 import { useSelector } from "react-redux"
 import { addUser, mainSelector, setCurrentUser, setIsAuth } from "./mainSlicer"
 import { useDispatch } from "react-redux"
+import { SocialNetworks } from "../Components/SocialNetworks"
 
 export const Registration = () => {
 
@@ -40,18 +39,10 @@ export const Registration = () => {
             <div className={s.moduleDiscription}>
                 Зарегистрируйся и получи доступ к аналитике аккаунтов.
             </div>
-            <div className={s.socialNetworks}>
-                <button>
-                    <img alt="Facebook" src={FacebookIcon} /> Войти через Facebook
-                </button>
-                <button>
-                    <img alt="Google" src={GoogleIcon} /> Войти через Google
-                </button>
-            </div>
+            <SocialNetworks />
             <div className={s.moduleDiscription}>
                 или
             </div>
-
             <Formik
                 initialValues={{ name: '', email: '', password: '', promocode: '' }}
                 validate={values => {

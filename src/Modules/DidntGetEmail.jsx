@@ -11,10 +11,6 @@ export const DidntGetEmail = () => {
 
     const { users } = useSelector(mainSelector)
 
-    const resendMailr = () => {
-        history.push("/emailsent/didntgetemail")
-    }
-
     const onAbbortClick = () => {
         history.push("/emailconfirmation")
     }
@@ -41,7 +37,7 @@ export const DidntGetEmail = () => {
                     return errors
                 }}
                 onSubmit={(values, actions) => {
-                    users.some(user => user.email === values.email) ? resendMailr() : actions.setStatus('Пользователя с указанным email не существует')
+                    users.some(user => user.email === values.email) ? history.push("/emailsent") : actions.setStatus('Пользователя с указанным email не существует')
                 }}
             >
                 {({

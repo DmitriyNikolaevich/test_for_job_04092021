@@ -1,11 +1,10 @@
 import { Formik } from "formik"
 import React, { useEffect, } from "react"
 import s from "./Entrance.module.scss"
-import FacebookIcon from "../assets/icons/FacebookIcon.svg"
-import GoogleIcon from "../assets/icons/GoogleIcon.svg"
 import { useHistory } from "react-router"
 import { useDispatch, useSelector } from "react-redux"
 import { mainSelector, setIsAuth } from "./mainSlicer"
+import { SocialNetworks } from "../Components/SocialNetworks"
 
 export const Entrance = () => {
 
@@ -33,14 +32,7 @@ export const Entrance = () => {
             <div className={s.moduleDiscription}>
                 Добро пожаловать, рады видеть вас снова 👋
             </div>
-            <div className={s.socialNetworks}>
-                <button>
-                    <img alt="Facebook" src={FacebookIcon} /> Войти через Facebook
-                </button>
-                <button>
-                    <img alt="Google" src={GoogleIcon} /> Войти через Google
-                </button>
-            </div>
+            <SocialNetworks />
             <div className={s.moduleDiscription}>
                 или
             </div>
