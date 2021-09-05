@@ -100,3 +100,52 @@
           }
     }
 }
+
+@media (max-width: 496px) {
+    .didntGetEmailWrapper {
+        box-sizing: border-box;
+        padding: 16px;
+        h1 {
+            font-size: 32px;
+            line-height: 44px;
+            margin-top: 121px;
+        }
+        .text {
+            width: 100%;
+            font-size: 14px;
+            line-height: 24px;
+        }
+        button {
+            height: 64px;
+            max-width: 420px;
+            width: 100%;
+            margin-top: 40px;
+            background: #4E74F5;
+            border-radius: 10000px;
+            border: none;
+            color: white;
+            font-size: 16px;
+            line-height: 13px;
+        }
+        form {
+            width: 100%;
+            input {
+                width: 100%;
+                height: 56px;
+                margin-top: 16px;
+                border: 1px solid #4E74F5;
+                box-sizing: border-box;
+                border-radius: 12px;
+                background: none;
+                padding-left: 20px;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 19px;
+                outline: none;
+            }
+            .errorField {
+                border: 1px solid #FB2424;
+            }
+        }
+    }
+}

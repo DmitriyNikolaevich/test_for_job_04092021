@@ -100,7 +100,7 @@ export const Entrance = () => {
                         />
                         {errors.email && touched.email && errors.email}
                         {errors.password && touched.password && errors.password}
-                        {status && <div className="text-success">{status}</div>}
+                        {status && <div className={s.textSuccess}>{status}</div>}
                         <button type="submit">
                             Войти в аккаунт
                         </button>

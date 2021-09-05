@@ -21,6 +21,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        box-sizing: border-box;
         button {
             width: 100%;
             height: 56px;
@@ -65,6 +66,9 @@
         }
         .errorField {
             border: 1px solid #FB2424;
+        }
+        .textSuccess {
+            width: 496px;
         }
         ::-webkit-input-placeholder {
             font-family: 'Open' Sans;
@@ -125,5 +129,87 @@
         font-size: 14px;
         line-height: 24px;
         color: #4E74F5;
+    }
+}
+
+@media (max-width: 496px) {
+    .entranceWrapper {
+        h1 {
+            font-size: 40px;
+            line-height: 54px;
+            margin-bottom: 0;
+
+        }
+        .moduleDiscription {
+            padding: 0 16px;
+            font-size: 14px;
+            line-height: 24px;
+        }
+        .socialNetworks {
+            margin-top: 20px;
+            padding: 0 16px;
+            min-height: 130px;
+            flex-direction: column;
+            justify-content: space-around;
+            button {
+                position: relative;
+                width: 100%;
+                height: 56px;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                border: 1px solid #E6E6E6;
+                box-sizing: border-box;
+                border-radius: 12px;
+                background: none;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 24px;
+                img {
+                    position: absolute;
+                    left: 16px;
+                }
+            }
+            :last-child {
+                margin-left: 0;
+            }
+        }
+        form {
+            box-sizing: border-box;
+            padding: 0 16px;
+            input {
+                font-size: 14px;
+                line-height: 19px;
+            }
+            .errorField {
+                border: 1px solid #FB2424;
+            }
+            .textSuccess {
+                width: 100%;
+            }
+            button {
+                height: 56px;
+                font-size: 14px;
+                line-height: 14px;
+            }
+            span {
+                font-size: 14px;
+                line-height: 24px;
+            }
+        }
+    }
+}
+
+@media (max-width: 280px) {
+    .entranceWrapper {
+        .socialNetworks {
+            button {
+                padding-left: 40px;
+                img {
+                    position: absolute;
+                    left: 16px;
+                }
+            }
+        }
     }
 }

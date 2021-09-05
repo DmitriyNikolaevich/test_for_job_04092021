@@ -38,7 +38,7 @@ export const Header = () => {
     
     return (
         <header className={s.headerWrapper}>
-            <div>
+            <div className={s.logo}>
                 <img alt="LiveDune" src={LiveDuneLogoBig} />
             </div>
             <div className={s.controllPanel}>
